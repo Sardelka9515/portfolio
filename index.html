@@ -18,10 +18,12 @@
       }
 
       :root {
-        --primary-color: #2ecc71;
-        --secondary-color: #27ae60;
-        --dark-color: #2c3e50;
-        --light-color: #ecf0f1;
+        --primary-color: #7f5af0; /* Purple */
+        --secondary-color: #2cb67d; /* Teal */
+        --dark-color: #16161a; /* Dark background */
+        --light-color: #fffffe; /* White text */
+        --accent-color: #ff8906; /* Orange accent */
+        --surface-color: #242629; /* Card background */
       }
 
       body {
@@ -108,7 +110,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: linear-gradient(45deg, #3498db, #2ecc71);
+        background: linear-gradient(
+          135deg,
+          var(--primary-color),
+          var(--secondary-color)
+        );
         color: white;
         text-align: center;
         position: relative;
@@ -174,10 +180,10 @@
       }
 
       .project-card {
-        background: rgba(255, 255, 255, 0.1);
-        padding: 1.5rem;
-        border-radius: 10px;
-        transition: transform 0.3s ease;
+        background: var(--surface-color);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 2rem;
       }
 
       .project-card:hover {
@@ -187,6 +193,26 @@
       .project-card h3 {
         color: var(--primary-color);
         margin-bottom: 1rem;
+      }
+
+      .project-card img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+
+      .project-card .tags {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      .project-card .tag {
+        background: var(--primary-color);
+        color: var(--light-color);
+        padding: 0.25rem 0.75rem;
+        border-radius: 999px;
+        font-size: 0.875rem;
       }
 
       /* Contact Section */
