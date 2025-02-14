@@ -14,7 +14,9 @@
   --accent-color: #ff8906; /* Orange accent */
   --surface-color: #49525f; /* Card background */
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
   background-color: var(--light-color);
   color: var(--dark-color);
